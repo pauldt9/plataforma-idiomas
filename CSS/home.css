@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2264FF;
+    --secondary-color: #EFF6FF;
+    --text-color: #252525;
+    --white-color: #FFF;
+
+    --placeholder-color: #898989;
+
+    --hover-color-blue: #154bca;
+    --hover-color-white: #dde6f1;
+
+    --ff-name: "Super Trend", sans-serif;
+    --ff-text: "cream DEMO", sans-serif;
+    --ff-titles: "Simply Rounded", sans-serif;
+    --ff-btn: "Stretch Pro", sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(180deg, #C8D8FF 0%, #FFF 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Pantalla principal */
+
+.main-header h1 {
+    color: var(--primary-color);
+    font-family: var(--ff-name);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 3.875rem;
+    margin-top: 2.625rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-img img {
+    width: 100%;
+    max-width: 35.125rem;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 0.625rem;
+    background: lightgray 50% / cover no-repeat;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.main-title {
+    font-family: var(--ff-text);
+    color: var(--text-color);
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.main-title .highlight {
+    font-family: var(--ff-titles);
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.btn {
+    display: flex;
+    width: 29rem;
+    height: 4.25rem;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 0.625rem;
+    font-size: 1.25rem;
+    font-family: var(--ff-btn);
+    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.register-btn {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    margin-top: 40px;
+}
+
+.register-btn:hover {
+    background: var(--hover-color-blue);
+    transform: scale(1.05);
+}
+
+.login-btn {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    font-family: var(--ff-btn);
+    margin-top: 25px;
+}
+
+.login-btn:hover {
+    background: var(--hover-color-white);
+    transform: scale(1.05);
+}
+
+.flags-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 3.4375rem;
+    flex-wrap: wrap;
+}
+
+.flags-container img {
+    width: 4rem;
+    height: auto;
+}
+
+/* Registro y Login*/
+.gradient-card {
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    height: 41rem;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    background: linear-gradient(180deg, #FFF 0%, #C8D8FF 100%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.main-user-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.gradient-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    color: var(--text-color);
+    text-align: center;
+    font-family: var(--ff-titles);
+    font-size: 3rem;
+    font-style: normal;
+    margin-top: 4.5rem;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+}
+
+.mail-input, .pass-input, .name-input {
+    display: flex;
+    width: 25.875rem;
+    height: 3rem;
+    padding: 10px 10px 10px 20px;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    background: var(--white-color);
+    margin-top: 2.625rem;
+
+    font-family: var(--ff-text);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: border-color 0.3s ease;
+}
+
+.mail-input:focus, .pass-input:focus, .name-input:focus {
+    outline: none; 
+    border-color: var(--primary-color); 
+}
+
+.small-submit-btn {
+    border: none;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    width: 25.875rem;
+    height: 3.25rem;
+}
+
+.small-submit-btn:hover {
+    background: var(--hover-color-blue);
+    transform: scale(1.05);
+}
+
+.small-reg-btn {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    width: 25.875rem;
+    height: 3.25rem;
+}
+
+.small-reg-btn:hover {
+    background: var(--hover-color-white);
+    transform: scale(1.05);
+}
+
+.forgot-link {
+    color: var(--primary-color);
+    text-align: center;
+    font-family: var(--ff-titles);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.forgot-link:hover {
+    color: var(--hover-color-blue);
+}
+
+.register-prompt {
+    color: var(--text-color);
+    text-align: center;
+    font-family: var(--ff-text);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.space {
+    margin-top: 2.6rem;
+}
+
+@media (max-width: 650px) {
+    .main-img {
+        display: none;
+    }
+
+    .main-header h1 {
+        margin-left: 0;
+        margin-top: 12.5rem;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .main-title .highlight {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 15px;
+        width: 19.6875rem;
+        height: 3.25rem;
+    }
+
+    .register-btn {
+        margin-top: 15rem;
+    }
+
+    .login-btn {
+        margin-top: 1.125rem;
+    }
+
+    .flags-container {
+        display: none;
+    }
+
+    /* Registro y login*/
+    header.mobile-app-name h1 {
+        margin: 6rem auto 0 auto; 
+    }
+
+    .gradient-card {
+        background: none;
+        box-shadow: none;
+
+        width: 20.625rem;
+        height: 21.25rem;
+        padding: 0;
+        margin-left: 0.5rem;
+    }
+
+    .card-title {
+        font-size: 2.125rem;
+        margin-top: 2.5rem;
+    }
+
+    .mail-input, .pass-input, .name-input {
+        width: 19.6875rem;
+        height: 3rem;
+    }
+}
+
+
