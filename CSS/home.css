@@ -1,3 +1,23 @@
+@font-face {
+    font-family: "Super Trend";
+    src: url("../Fonts/Super\ Trend.ttf");
+}
+
+@font-face {
+    font-family: "Simply Rounded";
+    src: url("../Fonts/Simply\ Rounded.ttf");
+}
+
+@font-face {
+    font-family: "cream";
+    src: url("../Fonts/cream-DEMO.ttf");
+}
+
+@font-face {
+    font-family: "StretchPro";
+    src: url("../Fonts/StretchPro.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +39,13 @@
     --ff-text: "cream DEMO", sans-serif;
     --ff-titles: "Simply Rounded", sans-serif;
     --ff-btn: "Stretch Pro", sans-serif;
+    
+    /* Variables adicionales de styleGlobal.css (por si acaso) */
+    --color1: #3358EECC; 
+    --color2: #EFF6FF;
+    --color3: #FF6D53CC;
+    --color4: #EFF6FF;
+    --color5: #F2F6FF;
 }
 
 body {
@@ -43,6 +70,7 @@ a {
     line-height: normal;
     margin-left: 3.875rem;
     margin-top: 2.625rem;
+    
 }
 
 .hero-content {
@@ -53,6 +81,7 @@ a {
     gap: 10rem;
     flex-wrap: wrap;
     padding: 2rem;
+    margin-bottom: 5.6875rem;
 }
 
 .main-content {
@@ -153,6 +182,7 @@ a {
     padding-right: 4.5rem;
     background: linear-gradient(180deg, #FFF 0%, #C8D8FF 100%);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 2rem;
 }
 
 .main-user-form {
@@ -262,9 +292,255 @@ a {
     margin-top: 2.6rem;
 }
 
-@media (max-width: 650px) {
+.header {
+    color: var(--name); 
+    font-family: "Super Trend";
+    font-weight: 400;
+    font-size: 1.4em;
+    margin-bottom: 0.5rem;
+    margin-left: 3.875rem;
+    margin-top: 2.625rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.instruction {
+    font-family: "Simply Rounded";
+    font-size: 2.5rem;
+    color: var(--text-color); 
+    text-align: center;
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+}
+
+.instruction span {
+    color: var(--primary-color); 
+}
+
+.tellUs {
+    font-family: "cream";
+    font-size: 1.2rem;
+    text-align: center;
+    width: 60%;
+    padding-bottom: 3.5rem;
+}
+
+/*Estilo base de botones (Páginas de selección) */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 40%;
+    min-width: 375px;
+}
+
+.buttons button {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    font-family: "cream";
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+.buttons button img {
+    width: 15%;
+    max-height: 100px;
+}
+
+
+/*Página 1: Selección de idioma */
+
+.btn-ingles {
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+.btn-frances {
+    background-color: var(--color2);
+    color: var(--text-color); 
+}
+
+.btn-español {
+    background-color: var(--color3);
+    color: var(--color2);
+}
+
+.reminder {
+    font-family: "cream";
+    font-size: 0.9rem;
+    text-align: center;
+    width: 60%;
+}
+
+
+/*Página 2: Motivo de idioma */
+
+.page-motivo .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    width: 65%;
+    min-width: 400px;
+}
+
+.page-motivo .buttons button {
+    flex: 0 1 calc(50% - 1.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    font-family: "cream";
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    background-color: #FFFFFF;
+}
+
+.page-motivo .buttons button:hover {
+    transform: scale(1.05);
+}
+
+.page-motivo .buttons button img {
+    width: 25%;
+    height: auto;
+    min-height: 90px;
+    max-height: 120px;
+    margin-right: 12px;
+}
+
+/*Página 3: Nivel de idioma */
+
+.page-nivel .buttons {
+    gap: 2.5rem;
+    width: 40%;
+    min-width: 375px;
+}
+
+.page-nivel .buttons button {
+    background-color: var(--color5);
+    border-radius: 15px;
+    max-height: 110px;
+}
+
+.page-nivel .buttons button div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.page-nivel .buttons button strong {
+    font-family: "cream";
+    font-size: 1.2rem;
+    color: var(--text-color); /* var(--font) */
+}
+
+.page-nivel .buttons button small {
+    font-family: "cream";
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+
+.generate {
+    width: 40%;
+    min-width: 375px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-generar {
+    background-color: var(--primary-color); /* var(--name) */
+    color: white;
+    font-family: "StretchPro";
+    font-size: 1.1rem;
+    padding: 1.2rem 2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 3rem;
+}
+
+.btn-generar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 14px rgba(0,0,0,0.25);
+}
+
+
+/* Breakpoint de home.css */
+@media (max-width: 768px) {
     .main-img {
         display: none;
+    }
+
+    .delete-name {
+        display: none;
+    }
+
+    .container {
+        min-height: 100vh;
+        /* transform: translateY(-5%); */ /* Comentado por si causa problemas */
+    }
+
+    .instruction {
+        margin-bottom: 1rem;
+    }
+
+    .tellUs {
+        margin-bottom: 1.5rem;
+    }
+
+    .buttons {
+        width: 90%;
+    }
+
+    .buttons button {
+        width: 100%;
+        min-height: 90px;
+    }
+
+    .page-motivo .buttons {
+        flex-direction: column; 
+        width: 90%;
+    }
+
+    .page-motivo .buttons button {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .instruction {
+        font-size: 2.25rem;
+        padding-bottom: 3rem;
     }
 
     .main-header h1 {
@@ -317,12 +593,16 @@ a {
 
     .card-title {
         font-size: 2.125rem;
-        margin-top: 2.5rem;
+        margin-top: 4rem;
     }
 
     .mail-input, .pass-input, .name-input {
         width: 19.6875rem;
         height: 3rem;
+    }
+
+    .delete-name {
+        display: none;
     }
 }
 
