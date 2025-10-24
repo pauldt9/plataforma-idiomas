@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Progreso del curso</title>
+  <link rel="stylesheet" href="./CSS/home.css">
+
+</head>
+<body>
+
+  <div class="course-page container">
+
+    <!-- Top bar: nombre app + avatar -->
+    <header class="top-bar" style="width:100%;">
+      <h1 class="main-header">NOMBRE APP</h1>         
+      <div class="profile-icon" title="Mi perfil">
+        <img src="./Images/pfp.png" alt="Usuario">
+      </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="course-main">
+
+      <div class="course-title">
+        <h2 class="main-title">Curso de <span class="highlight">ingles</span></h2>
+        <div class="course-level">Nivel <span>principiante</span></div>
+      </div>
+
+      <!-- Card con progreso -->
+      <section class="course-card" aria-label="Progreso del curso">
+        
+        <div class="progress-label">Progreso del curso</div>
+        <div class="progress-row">
+          
+            <div class="progress-track-wrap">
+                <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="7">
+                    <div class="progress-fill" style="width:7%"></div>
+                </div>
+            </div>
+          <div class="progress-percent">7%</div>
+        </div>
+
+        <!-- Steps / Niveles representados por círculos con avatar -->
+        <div class="steps-row" aria-hidden="false">
+          <div class="steps">
+
+            <!-- Paso 1 (completado) -->
+            <div class="step completed" aria-label="Módulo 1 completado">
+              <div class="avatar-wrap">
+                <img src="./Images/step1.png" alt="Módulo 1">
+                <span class="check">✓</span>
+              </div>
+            </div>
+
+             <div class="connector"></div>
+
+            <!-- Paso 2 (activo / siguiente) -->
+            <div class="step active" aria-label="Módulo 2 en curso">
+              <a href="exercise.html" class="avatar-wrap">
+                <img src="./Images/step2.png" alt="Módulo 2">
+              </a>
+            </div>
+
+             <div class="connector"></div>
+
+            <!-- Paso 3 -->
+            <div class="step" aria-label="Módulo 3">
+              <div class="avatar-wrap">
+                <img src="./Images/step3.png" alt="Módulo 3">
+              </div>
+            </div>
+
+            <div class="connector"></div>
+
+            <!-- Paso 4 -->
+            <div class="step" aria-label="Módulo 4">
+              <div class="avatar-wrap">
+                <img src="./Images/step4.png" alt="Módulo 4">
+              </div>
+            </div>
+
+             <div class="connector"></div>
+
+            <!-- Paso 5 -->
+            <div class="step" aria-label="Módulo 5">
+              <div class="avatar-wrap">
+                <img src="./Images/step5.png" alt="Módulo 5">
+              </div>
+            </div>
+
+             <div class="connector"></div>
+
+            <!-- Paso 6 -->
+            <div class="step" aria-label="Módulo 6">
+              <div class="avatar-wrap">
+                <img src="./Images/step6.png" alt="Módulo 6">
+              </div>
+            </div>
+
+             <div class="connector"></div>
+
+            <!-- Paso 7 -->
+            <div class="step" aria-label="Módulo 6">
+              <div class="avatar-wrap">
+                <img src="./Images/step7.png" alt="Módulo 7">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
