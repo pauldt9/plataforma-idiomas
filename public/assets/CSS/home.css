@@ -1,21 +1,21 @@
 @font-face {
     font-family: "Super Trend";
-    src: url("../Fonts/Super\ Trend.ttf");
+    src: url("/proyecto/plataforma-idiomas/public/assets/Fonts/Super\ Trend.ttf");
 }
 
 @font-face {
     font-family: "Simply Rounded";
-    src: url("../Fonts/Simply\ Rounded.ttf");
+    src: url("/proyecto/plataforma-idiomas/public/assets/Fonts/Simply\ Rounded.ttf");
 }
 
 @font-face {
     font-family: "cream";
-    src: url("../Fonts/cream-DEMO.ttf");
+    src: url("/proyecto/plataforma-idiomas/public/assets/Fonts/cream-DEMO.ttf");
 }
 
 @font-face {
     font-family: "StretchPro";
-    src: url("../Fonts/StretchPro.otf");
+    src: url("/proyecto/plataforma-idiomas/public/assets/Fonts/StretchPro.otf");
 }
 
 * {
