@@ -1,14 +1,21 @@
 <?php
+session_start();
+
+if (!isset($_SESSION["user_id"])) {
+    header("Location: login.php");
+    exit;
+}
 $page_title = "Progreso del Curso";
 $header_class = "top-bar"; 
 include "../partials/header-logged.php";
 ?>
 
+
 <div class="course-page container">
 
 
 
-    <!-- Contenido principal -->
+
     <main class="course-main">
 
         <div class="course-title">
@@ -16,7 +23,6 @@ include "../partials/header-logged.php";
             <div class="course-level">Nivel <span>principiante</span></div>
         </div>
 
-        <!-- Card con progreso -->
         <section class="course-card" aria-label="Progreso del curso">
 
             <div class="progress-label">Progreso del curso</div>
@@ -32,11 +38,11 @@ include "../partials/header-logged.php";
                 <div class="progress-percent">7%</div>
             </div>
 
-            <!-- Steps / Niveles representados por círculos con avatar -->
+      
             <div class="steps-row" aria-hidden="false">
                 <div class="steps">
 
-                    <!-- Paso 1 (completado) -->
+         
                     <div class="step completed" aria-label="Módulo 1 completado">
                         <div class="avatar-wrap">
                             <img src="/proyecto/plataforma-idiomas/public/assets/Images/step1.png" alt="Módulo 1">
@@ -46,7 +52,7 @@ include "../partials/header-logged.php";
 
                     <div class="connector"></div>
 
-                    <!-- Paso 2 (activo / siguiente) -->
+ 
                     <div class="step active" aria-label="Módulo 2 en curso">
                         <a href="exercise.php" class="avatar-wrap">
                             <img src="/proyecto/plataforma-idiomas/public/assets/Images/step2.png" alt="Módulo 2">
@@ -55,7 +61,7 @@ include "../partials/header-logged.php";
 
                     <div class="connector"></div>
 
-                    <!-- Paso 3 -->
+         
                     <div class="step" aria-label="Módulo 3">
                         <div class="avatar-wrap">
                             <img src="/proyecto/plataforma-idiomas/public/assets/Images/step3.png" alt="Módulo 3">
@@ -64,7 +70,7 @@ include "../partials/header-logged.php";
 
                     <div class="connector"></div>
 
-                    <!-- Paso 4 -->
+     
                     <div class="step" aria-label="Módulo 4">
                         <div class="avatar-wrap">
                             <img src="/proyecto/plataforma-idiomas/public/assets/Images/step4.png" alt="Módulo 4">
@@ -73,7 +79,7 @@ include "../partials/header-logged.php";
 
                     <div class="connector"></div>
 
-                    <!-- Paso 5 -->
+    
                     <div class="step" aria-label="Módulo 5">
                         <div class="avatar-wrap">
                             <img src="/proyecto/plataforma-idiomas/public/assets/Images/step5.png" alt="Módulo 5">
@@ -82,7 +88,7 @@ include "../partials/header-logged.php";
 
                     <div class="connector"></div>
 
-                    <!-- Paso 6 -->
+
                     <div class="step" aria-label="Módulo 6">
                         <div class="avatar-wrap">
                             <img src="/proyecto/plataforma-idiomas/public/assets/Images/step6.png" alt="Módulo 6">
@@ -91,7 +97,7 @@ include "../partials/header-logged.php";
 
                     <div class="connector"></div>
 
-                    <!-- Paso 7 -->
+  
                     <div class="step" aria-label="Módulo 7">
                         <div class="avatar-wrap">
                             <img src="/proyecto/plataforma-idiomas/public/assets/Images/step7.png" alt="Módulo 7">

@@ -16,7 +16,5 @@ $header_class = $header_class ?? "top-bar";
 
 <header class="<?= $header_class ?>" style="width:100%;">
     <h1 class="main-header">Talkio</h1>
-    <div class="profile-icon" title="Mi perfil">
-        <img src="/proyecto/plataforma-idiomas/public/assets/Images/pfp.png" alt="Usuario">
-    </div>
+    <a href="../views/logout.php">Cerrar sesión</a>
 </header>

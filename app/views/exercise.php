@@ -1,11 +1,11 @@
 <?php
 $page_title = "Ejercicio";
-include "../partials/header.php";   // Carga <html>, <head>, y <body>
+include "../partials/header.php";   
 ?>
 
 <div class="exercise-page container">
 
-    <!-- Header especial del ejercicio -->
+
     <header class="top-bar-exercise" style="width: 100%;">
         <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">X</h1>
 
@@ -16,7 +16,7 @@ include "../partials/header.php";   // Carga <html>, <head>, y <body>
         </div>
     </header>
 
-    <!-- Contenido principal -->
+
     <main class="exercise-main">
 
         <div class="exercise-title">
