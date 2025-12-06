@@ -16,11 +16,11 @@ class PlanEstudio {
     }
 
 
-    public function create($usuario_id, $idioma, $nivel, $objetivo){
+    public function create($usuario_id, $idioma, $nivel, $objetivo, $contenido_json = null){
         $stmt = $this->pdo->prepare("
-            INSERT INTO planes_estudio (usuario_id, idioma, nivel, objetivo)
-            VALUES (?, ?, ?, ?)
+            INSERT INTO planes_estudio (usuario_id, idioma, nivel, objetivo, contenido_json)
+            VALUES (?, ?, ?, ?, ?)
         ");
-        return $stmt->execute([$usuario_id, $idioma, $nivel, $objetivo]);
+        return $stmt->execute([$usuario_id, $idioma, $nivel, $objetivo, $contenido_json]);
     }
 }
