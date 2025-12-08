@@ -39,14 +39,6 @@ class User {
         return $stmt->fetch();
     }
 
-
-    public function generateResetToken($email){
-        $token = bin2hex(random_bytes(16));
-        
-       
-        return $token;
-    }
-
     public function updatePassword($email, $newHash) {
     $stmt = $this->pdo->prepare("UPDATE usuarios SET password_hash = ? WHERE email = ?");
     return $stmt->execute([$newHash, $email]);
